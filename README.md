@@ -14,7 +14,7 @@
 
 ### Demo
 It's a preview of the project
-![todo]
+![Screenshot 2025-04-30 002633](https://github.com/user-attachments/assets/5911faff-d2eb-4e34-8803-1128046b8760)
 
 ### General features
 - Class Based View
@@ -30,14 +30,10 @@ It's a preview of the project
 ### Setup
 To get the repository you need to run this command in git terminal
 ```bash
-git clone https://github.com/Benfoxyy/Django-CBV-DRF-TodoList.git
+https://github.com/mohammadmatin2000/CBV-DRF-ToDoApp.git
 ```
 
 ### Getting ready
-Create an environment for install all dependencies with this command
-```bash
-python -m venv venv
-```
 
 Install all project dependencies with this command
 ```bash
@@ -75,6 +71,7 @@ Whene server is up and running, go to a browser and type http://127.0.0.1:8000
 
 ### Database shema
 
+![Screenshot 2025-04-30 002305](https://github.com/user-attachments/assets/6c978c2d-b553-48fd-ab49-a54beb935daf)
 
 <hr>
 
