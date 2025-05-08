@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
-
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 # ======================================================================================================================
 # Custom User Manager: Defines methods for creating standard and superuser accounts
 class UserManager(BaseUserManager):
@@ -28,6 +29,7 @@ class UserManager(BaseUserManager):
         extra_fields.setdefault('is_staff', True)  # Ensures superuser has staff access
         extra_fields.setdefault('is_superuser', True)  # Ensures superuser privileges
         extra_fields.setdefault('is_active', True)  # Activates the account by default
+        extra_fields.setdefault('is_verified', True)
 
         if extra_fields.get('is_staff') is not True:
             raise ValueError('Superuser must have is_staff=True.')  # Ensures proper staff status
@@ -46,6 +48,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(max_length=255, unique=True)  # Defines email as the unique identifier
     is_staff = models.BooleanField(default=True)  # Determines whether the user can access the admin panel
     is_active = models.BooleanField(default=True)  # Indicates whether the account is active
+    is_verified = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'  # Specifies the email field as the primary identifier for authentication
     REQUIRED_FIELDS = []  # No additional required fields beyond email
@@ -58,4 +61,17 @@ class User(AbstractBaseUser, PermissionsMixin):
         """
         return self.email
 
+# ======================================================================================================================
+class Profile(models.Model):
+    user=models.ForeignKey(User,on_delete=models.CASCADE,default=1)
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    description = models.TextField()
+    created_date = models.DateTimeField(auto_now_add=True)
+    modified_date = models.DateTimeField(auto_now=True)
+# ======================================================================================================================
+@receiver(post_save, sender=User)
+def save_profile(sender, instance, created, **kwargs):
+    if created:  # If a new user is created
+        Profile.objects.create(user=instance)
 # ======================================================================================================================

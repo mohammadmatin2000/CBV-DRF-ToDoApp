@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import User
+from .models import User,Profile
 
 # ======================================================================================================================
 # CustomUserAdmin: A custom admin configuration for managing User model instances
@@ -11,10 +11,10 @@ class CustomUserAdmin(UserAdmin):
 
     model = User  # Specifies the model that this admin configuration applies to
 
-    list_display = ("email", "is_staff", "is_active")
+    list_display = ("email", "is_staff", "is_active","is_verified")
     # Defines the fields visible in the admin list view.
 
-    list_filter = ("email", "is_staff", "is_active")
+    list_filter = ("email", "is_staff", "is_active","is_verified")
     # Adds filtering options in the admin panel to sort users by email, staff status, and active status.
 
     search_fields = ("email",)
@@ -28,7 +28,7 @@ class CustomUserAdmin(UserAdmin):
             'fields': ('email', 'password')  # Displays email and password fields in the admin panel
         }),
         ('Permissions', {  # Section for managing user permissions
-            'fields': ('is_staff', 'is_superuser', 'is_active')  # Controls access levels within the application
+            'fields': ('is_staff', 'is_superuser', 'is_active','is_verified')  # Controls access levels within the application
         }),
         ('Group Permissions', {  # Section for assigning groups and specific user permissions
             'fields': ('groups', 'user_permissions')  # Allows for role-based access control
@@ -52,5 +52,5 @@ class CustomUserAdmin(UserAdmin):
 # ======================================================================================================================
 # Registers the User model with the admin site using the customized CustomUserAdmin configuration
 admin.site.register(User, CustomUserAdmin)
-
+admin.site.register(Profile)
 # ======================================================================================================================

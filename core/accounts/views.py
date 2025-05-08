@@ -1,6 +1,5 @@
 from django.views.generic import CreateView
 from .models import User
-
 # ======================================================================================================================
 # SignUpView: A class-based view for user registration
 class SignUpView(CreateView):
