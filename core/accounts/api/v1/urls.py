@@ -1,6 +1,6 @@
 from django.urls import include, path
 from .views import (RegisterApiView, CustomAuthToken, CustomProfileView, CustomChangePasswordView,
-                    CustomActivationView, CustomActivationResendView, CustomResetPasswordView)
+                    CustomActivationView, CustomActivationResendView, CustomResetPasswordView,CustomDeleteToken)
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -34,6 +34,7 @@ urlpatterns = [
     # Login using Custom Auth Token
     path("login/token/", CustomAuthToken.as_view(), name="login"),
     # - Maps '/login/token/' to **CustomAuthToken**, handling authentication via token-based login.
+    path('logout/token/', CustomDeleteToken.as_view(), name="delete-token"),
 
     # JWT Authentication Routes
     path('jwt/token/create/', TokenObtainPairView.as_view(), name='token_obtain_pair'),

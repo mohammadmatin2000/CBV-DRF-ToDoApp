@@ -64,6 +64,12 @@ class CustomAuthToken(ObtainAuthToken):
             'email': user.email
         })
 # ======================================================================================================================
+class CustomDeleteToken(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    def post(self, request, *args, **kwargs):
+        request.user.auth_token.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+# ======================================================================================================================
 # CustomProfileView: Retrieves user profile details
 class CustomProfileView(generics.GenericAPIView):
     """
