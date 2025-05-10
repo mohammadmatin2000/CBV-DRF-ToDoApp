@@ -4,6 +4,7 @@ from django.contrib.auth import get_user_model
 # Dynamically fetches the user model, ensuring flexibility in case of custom user models
 User = get_user_model()
 
+
 # ======================================================================================================================
 # ToDoApp: A model representing tasks or notes created by users
 class ToDoApp(models.Model):
@@ -29,5 +30,6 @@ class ToDoApp(models.Model):
         Returns the task content as the string representation of the object.
         """
         return self.content
+
 
 # ======================================================================================================================

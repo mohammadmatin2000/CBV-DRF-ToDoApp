@@ -1,5 +1,6 @@
 from rest_framework import permissions
 
+
 # ======================================================================================================================
 # Custom Permission: IsOwnerOrReadOnly
 class IsOwnerOrReadOnly(permissions.BasePermission):
@@ -20,6 +21,9 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
 
         # Write permissions are restricted to the object’s owner.
         # Assumes the model has an 'author' attribute representing ownership.
-        return obj.author == request.user  # Allow modification only if the requester is the owner
+        return (
+            obj.author == request.user
+        )  # Allow modification only if the requester is the owner
+
 
 # ======================================================================================================================

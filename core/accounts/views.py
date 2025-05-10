@@ -1,5 +1,7 @@
 from django.views.generic import CreateView
 from .models import User
+
+
 # ======================================================================================================================
 # SignUpView: A class-based view for user registration
 class SignUpView(CreateView):
@@ -9,7 +11,7 @@ class SignUpView(CreateView):
 
     model = User  # Specifies the model that this view interacts with (User model)
 
-    fields = ('email', 'password')
+    fields = ("email", "password")
     # Defines the fields to be included in the registration form.
     # Note: The password field should be handled securely (e.g., hashed before saving).
 
@@ -18,5 +20,6 @@ class SignUpView(CreateView):
 
     success_url = "/"
     # Redirects the user to the homepage upon successful registration.
+
 
 # ======================================================================================================================
