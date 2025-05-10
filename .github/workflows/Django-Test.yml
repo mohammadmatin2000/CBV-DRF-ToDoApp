@@ -1,0 +1,20 @@
+name: Django Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run the docker-compose
+      run: docker compose -f Docker-compose.yml up -d
+    - name: Test project
+      run: docker exec backend sh -c "pytest"
