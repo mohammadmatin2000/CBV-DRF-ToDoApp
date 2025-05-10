@@ -4,7 +4,6 @@ from accounts.models import User
 from datetime import datetime
 import pytest
 
-
 # ======================================================================================================================
 @pytest.fixture
 def client():
@@ -21,7 +20,7 @@ class TestPostAPI:
     #     response = client.get(url)
     #     assert response.status_code == 200
     def test_create_post_response_401_status(self, client):
-        url = reverse("blog:api-v1:post-list")
+        url = reverse("app:tasks-list")
         data = {
             "title": "Test title",
             "content": "Test content",
@@ -31,7 +30,7 @@ class TestPostAPI:
         response = client.post(url, data)
         assert response.status_code == 401
     def test_create_post_response_201_status(self, client, user):
-        url = reverse("blog:api-v1:post-list")
+        url = reverse("app:tasks-list")
         data = {
             "title": "Test title",
             "content": "Test content",
