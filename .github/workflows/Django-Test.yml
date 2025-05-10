@@ -17,4 +17,4 @@ jobs:
     - name: Run the docker-compose
       run: docker compose -f Docker-compose.yml up -d
     - name: Test project
-      run: docker exec backend sh -c "pytest"
+      run: docker exec todoapp sh -c "pytest"
