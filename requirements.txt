@@ -14,8 +14,12 @@ black
 flake8
 pytest
 pytest-django
+<<<<<<< HEAD
 
 locust
 celery
 redis
 django-celery-beat
+=======
+Faker
+>>>>>>> 92e9866af7567390f13db5edeb23cfebd2ee63a0
