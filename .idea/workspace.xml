@@ -5,43 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a12dbd5-b395-4b89-8147-775ef9da999b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/core/app/tests/test_app_models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/app/tests/test_app_urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/app/tests/test_app_views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/app/tests/test_post_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/pytest.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_3_2025_12_00_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_3_2025_12_00_PM__Changes_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/accounts/tasks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/core/celery.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/accounts/api/v1/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/api/v1/serializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/accounts/api/v1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/api/v1/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/accounts/api/v1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/api/v1/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/accounts/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/accounts/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/accounts/migrations/0002_alter_user_is_staff.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/migrations/0002_alter_user_is_staff.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/accounts/migrations/0003_profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/migrations/0003_profile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/accounts/migrations/0004_user_is_verified.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/migrations/0004_user_is_verified.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/api/v1/paginations.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/api/v1/paginations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/api/v1/permissions.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/api/v1/permissions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/api/v1/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/api/v1/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/api/v1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/api/v1/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/api/v1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/api/v1/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/core/asgi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/core/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/core/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/core/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +34,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -77,6 +53,9 @@
     &quot;accountId&quot;: &quot;2c92f074-c230-4bf8-92c7-a73eb63936e7&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -223,6 +202,20 @@
       <workItem from="1746886940866" duration="541000" />
       <workItem from="1746887551738" duration="291000" />
       <workItem from="1746887868039" duration="13000" />
+      <workItem from="1746982111719" duration="386000" />
+      <workItem from="1746982516440" duration="261000" />
+      <workItem from="1746982789045" duration="1409000" />
+      <workItem from="1746984244618" duration="372000" />
+      <workItem from="1746984634743" duration="374000" />
+      <workItem from="1748034586370" duration="66000" />
+      <workItem from="1748034667456" duration="412000" />
+      <workItem from="1748035098609" duration="656000" />
+      <workItem from="1748035818472" duration="229000" />
+      <workItem from="1748036080343" duration="544000" />
+      <workItem from="1748036647898" duration="476000" />
+      <workItem from="1748037140674" duration="431000" />
+      <workItem from="1748037593751" duration="440000" />
+      <workItem from="1748038056476" duration="652000" />
     </task>
     <servers />
   </component>

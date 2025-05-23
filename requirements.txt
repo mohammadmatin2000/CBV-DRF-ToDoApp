@@ -14,3 +14,8 @@ black
 flake8
 pytest
 pytest-django
+
+locust
+celery
+redis
+django-celery-beat

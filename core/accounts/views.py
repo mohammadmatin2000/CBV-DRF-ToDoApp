@@ -1,4 +1,6 @@
 from django.views.generic import CreateView
+from django.http import HttpResponse
+from .tasks import delete_task
 from .models import User
 
 
@@ -22,4 +24,11 @@ class SignUpView(CreateView):
     # Redirects the user to the homepage upon successful registration.
 
 
+# ======================================================================================================================
+def deletetask(request):
+    try:
+        delete_task.delay()
+        return HttpResponse("Task deletion started!", status=202)
+    except Exception as e:
+        return HttpResponse(f"Error: {str(e)}", status=500)
 # ======================================================================================================================

@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Security settings
 
 # SECRET_KEY: Stores the secret key securely using environment variables (do not expose in production)
-SECRET_KEY = config("SECRET_KEY")
+SECRET_KEY = config("SECRET_KEY",default="test")
 
 # DEBUG: Determines whether the application runs in debug mode (False in production)
 DEBUG = config("DEBUG", default=True, cast=bool)
@@ -17,7 +17,7 @@ DEBUG = config("DEBUG", default=True, cast=bool)
 # ALLOWED_HOSTS: Defines the list of host/domain names allowed to access the application
 ALLOWED_HOSTS = config(
     "ALLOWED_HOSTS", cast=lambda v: [s.strip() for s in v.split(",")]
-)
+,default="localhost")
 
 # ======================================================================================================================
 # Installed Applications: Defines Django's built-in and third-party apps
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "rest_framework.authtoken",  # Token-based authentication
     "mail_templated",  # Email templating system
     "django_filters",  # Filtering support for querysets
+    "django_celery_beat",
 ]
 
 # ======================================================================================================================
@@ -169,4 +170,12 @@ EMAIL_HOST_PASSWORD = (
     ""  # Defines SMTP authentication password (if applicable)
 )
 EMAIL_USE_TLS = False  # Determines whether TLS security is used
+# ======================================================================================================================
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:5500",
+]
+# ======================================================================================================================
+
+CELERY_BROKER_URL = "redis://redis:6379/0"
+
 # ======================================================================================================================
