@@ -20,6 +20,7 @@ locust
 celery
 redis
 django-celery-beat
+django-redis
 
 faker
 

@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import SignUpView,deletetask
+from .views import SignUpView,deletetask,data
 
 # ======================================================================================================================
 # Setting the application namespace to 'accounts' for better URL reversibility and organization
@@ -12,5 +12,6 @@ urlpatterns = [
     path("signup/", SignUpView.as_view(), name="signup"),
     path("", include("django.contrib.auth.urls")),
     path("email/", deletetask, name="email"),
+    path("data/", data, name="data"),
 ]
 # ======================================================================================================================
