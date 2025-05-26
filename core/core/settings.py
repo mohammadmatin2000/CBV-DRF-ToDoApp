@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config("SECRET_KEY",default="test")
 
 # DEBUG: Determines whether the application runs in debug mode (False in production)
-DEBUG = config("DEBUG", default=True, cast=bool)
+DEBUG = config("DEBUG", default=False, cast=bool)
 
 # ALLOWED_HOSTS: Defines the list of host/domain names allowed to access the application
 ALLOWED_HOSTS = config(
@@ -125,13 +125,15 @@ USE_TZ = True  # Enables timezone-aware datetime handling
 # ======================================================================================================================
 # Static & Media File Management
 
-STATIC_URL = "/static/"  # Defines the URL for static files
+STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR / "static"  # ✅ برای `collectstatic`
 
-MEDIA_ROOT = BASE_DIR / "media"  # Stores uploaded media files
-MEDIA_URL = "/media/"  # URL for serving media files
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
+# اگر پوشه `static` جداگانه دارید، `STATICFILES_DIRS` را تنظیم کنید:
 STATICFILES_DIRS = [
-    BASE_DIR / "static",  # Defines additional static file directories
+    BASE_DIR / "staticfiles"  # ✅ اگر فایل‌های اضافی استاتیک دارید
 ]
 
 # ======================================================================================================================
